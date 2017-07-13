@@ -1,0 +1,64 @@
+body{
+	background: linear-gradient(to bottom, rgba(186,163,255,1) 0%, rgba(168,142,255,1) 9%, rgba(59,15,255,1) 64%, rgba(192,173,255,1) 100%);
+}
+
+/*animación del logo*/
+#animations img{
+	margin-top: 30px;
+	animation-duration: 1s;/*controla el tiempo de animación*/
+	animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-name: pokemon;
+}
+
+@keyframes pokemon {/*hace que la animación sea latente*/
+    0% {
+      opacity: 1;        
+    }
+    100% {
+      opacity: 0;        
+    }
+}
+
+#animations:hover img {
+    animation-play-state: running;/*este código da el paso para que la animación se pause o empieze a correr*/
+}
+
+/*Caja contenedora del pokemon*/
+
+.container{
+	margin-bottom: 20px;
+}
+
+#box{
+	background-color: transparent;
+	border: 3px solid #A2A0A0;
+	border-radius: 7px;
+	width: 400px;
+	height: auto;
+	position: relative;
+	margin-top: 40px;
+	perspective-origin: center;/*queda como centro de perspectiva para las animaciones de las imágenes*/
+}
+
+#box-a{
+	background-color: white;
+	border: 3px solid #A2A0A0;
+	border-radius: 7px;
+	width: 400px;
+	height: auto;
+}
+
+#box-a h4{
+	font-weight: bold;
+}
+
+/*Animación de los pokemones*/
+#box:hover img{
+    transform: scale(2, 2);/*agranda la imagen (x,y) desde su perspectiva*/
+}
+
+   
+
+
